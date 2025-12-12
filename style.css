@@ -1,0 +1,53 @@
+body {
+    margin: 0;                              
+    /* 473472
+    53629E
+    87BAC3
+    D6F4ED */
+}
+
+header a{
+    text-decoration: none;
+    padding: 5px;
+    background-color: #D6F4ED;
+}
+
+header{
+    display: flex;
+    padding: 10px;
+    background-color: #D6F4ED; 
+}
+
+#logo{
+    flex: 2;
+}
+.NavBar Nav{
+    display: flex;
+    flex: 2;
+}
+.NavBar a{
+    flex: 1;
+    color: #473472;
+    font-weight: bolder;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    opacity: .3;
+    position: relative;
+}
+
+
+.about{
+    position: absolute;
+}
+
+.icon{
+    color: #473472;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10em;
+}
