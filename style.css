@@ -1,9 +1,10 @@
 body {
-    margin: 0;                              
-    /* 473472
-    53629E
-    87BAC3
-    D6F4ED */
+    margin: 0;  
+    background-color:#D6F4ED ;                            
+    /* #473472
+    #53629E
+    #87BAC3
+    #D6F4ED */
 }
 
 header a{
@@ -15,7 +16,7 @@ header a{
 header{
     display: flex;
     padding: 10px;
-    background-color: #D6F4ED; 
+    /* background-color: #53629E;  */
 }
 
 #logo{
@@ -38,7 +39,6 @@ img{
     position: relative;
 }
 
-
 .about{
     position: absolute;
 }
@@ -50,4 +50,18 @@ img{
     flex-direction: column;
     align-items: center;
     margin-top: 10em;
+}
+
+h3{
+    color: #473472;
+    background-color: #D6F4ED;
+    text-align: center;
+    padding: 2px;
+    margin: 0;
+    border: 2px solid #473472;
+    border-radius: 50px;
+}
+
+.birthday{
+    background-color: #87BAC3;
 }
