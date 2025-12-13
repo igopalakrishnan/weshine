@@ -33,8 +33,8 @@ header{
 }
 
 img{
-    height: 100%;
-    width: 100%;
+    height: 30vh;
+    width: 100vw;
     opacity: .3;
     position: relative;
 }
@@ -57,7 +57,7 @@ h3{
     background-color: #D6F4ED;
     text-align: center;
     padding: 2px;
-    margin: 0;
+    margin: 10px;
     border: 2px solid #473472;
     border-radius: 50px;
 }
