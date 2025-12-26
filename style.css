@@ -1,67 +1,74 @@
-body {
-    margin: 0;  
-    background-color:#D6F4ED ;                            
-    /* #473472
-    #53629E
-    #87BAC3
-    #D6F4ED */
+.image{
+    width: 100px;
+    height: 100px;
+    /* border: 2px solid blue; */
+    margin: 2em auto;
 }
 
-header a{
-    text-decoration: none;
-    padding: 5px;
-    background-color: #D6F4ED;
+.birthdayimg{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+
 }
 
-header{
-    display: flex;
-    padding: 10px;
-    /* background-color: #53629E;  */
+p{
+    column-count: 3;
+    column-rule: 4px solid blue;
+    column-gap: 3rem;
 }
 
-#logo{
-    flex: 2;
-}
-.NavBar Nav{
-    display: flex;
-    flex: 2;
-}
-.NavBar a{
-    flex: 1;
-    color: #473472;
-    font-weight: bolder;
-}
-
-img{
-    height: 30vh;
+.sticky {
+    background-color: brown;
     width: 100vw;
-    opacity: .3;
-    position: relative;
+    height: 100px;
+    position: sticky;
+    top: 0px;
 }
 
-.about{
-    position: absolute;
+.box {
+    background-color: black;
+    color: azure;
+    padding: 1rem;
+    font-size: 1.5rem;
 }
 
-.icon{
-    color: #473472;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10em;
-}
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr ;
+    grid-auto-rows: 1fr 2fr 2fr ;
+    /* grid-template-rows:2fr 2fr 1fr ;
+    grid-auto-columns:200px ; */
+} 
 
-h3{
-    color: #473472;
-    background-color: #D6F4ED;
-    text-align: center;
-    padding: 2px;
-    margin: 10px;
-    border: 2px solid #473472;
+.bounce {
+    background-color: black;
+    width: 100px;
+    height: 100px;
     border-radius: 50px;
+    margin: 100px auto;
+    animation-name: bounce;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
 }
 
-.birthday{
-    background-color: #87BAC3;
+@keyframes bounce {
+    0%,40%,70%,100% {
+        background-color: black;
+        transform: translateY(0);
+    }
+
+    20% {
+        background-color: red;
+        transform: translateY(-20px);
+    }
+    60% {
+        background-color: green;
+        transform: translateY(-60px);
+    }
+    85% {
+        background-color: blue;
+        transform: translateY(-85px);
+    }
 }
