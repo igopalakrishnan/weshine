@@ -1,7 +1,7 @@
-.image{
+/* .image{
     width: 100px;
     height: 100px;
-    /* border: 2px solid blue; */
+    border: 2px solid blue;
     margin: 2em auto;
 }
 
@@ -37,8 +37,8 @@ p{
     display: grid;
     grid-template-columns: 2fr 1fr ;
     grid-auto-rows: 1fr 2fr 2fr ;
-    /* grid-template-rows:2fr 2fr 1fr ;
-    grid-auto-columns:200px ; */
+    grid-template-rows:2fr 2fr 1fr ;
+    grid-auto-columns:200px ;
 } 
 
 .bounce {
@@ -48,7 +48,7 @@ p{
     border-radius: 50px;
     margin: 100px auto;
     animation-name: bounce;
-    animation-duration: 3.5s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function:linear;
 }
@@ -56,14 +56,14 @@ p{
 @keyframes bounce {
     0%,40%,70%,100% {
         background-color: black;
-        transform: translateY(0);
+        transform: translateY(100px);
     }
 
     20% {
         background-color: red;
-        transform: translateY(-20px);
+        transform: translateY(30px);
     }
-    60% {
+    55% {
         background-color: green;
         transform: translateY(-60px);
     }
@@ -72,3 +72,39 @@ p{
         transform: translateY(-85px);
     }
 }
+
+.clip {
+    font-size: 7rem;
+    font-weight: 800;
+    background-image: url(/images/images.jpeg);
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: hsla(208, 100%, 97%, 0.162);
+    background-position: center;
+}
+
+.img {
+    background-image: url(/images/png-clipart-green-emoji-smiley-emoticon-purple-green-smiley-face-face-smiley-thumbnail.png);
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+body{
+     min-height: 100vh;
+     background-color: gray;
+     background-image: radial-gradient(white,gray);
+}
+@media screen and (min-width:576px) {
+    body {
+        background-color: red;
+        background-image: radial-gradient(white, red);
+    }
+}
+@media screen and (min-width:768px) {
+    body {
+        background-color: green;
+        background-image: radial-gradient(white, green);
+    }
+} */
