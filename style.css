@@ -1,110 +1,27 @@
-/* .image{
-    width: 100px;
-    height: 100px;
-    border: 2px solid blue;
-    margin: 2em auto;
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: violet;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50px;
 }
 
-.birthdayimg{
-    background-color: aqua;
-    width: 100px;
-    height: 100px;
-
+#myBtn:hover {
+  background-color: purple;
 }
 
-p{
-    column-count: 3;
-    column-rule: 4px solid blue;
-    column-gap: 3rem;
-}
-
-.sticky {
-    background-color: brown;
-    width: 100vw;
-    height: 100px;
-    position: sticky;
-    top: 0px;
-}
-
-.box {
-    background-color: black;
-    color: azure;
-    padding: 1rem;
-    font-size: 1.5rem;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 2fr 1fr ;
-    grid-auto-rows: 1fr 2fr 2fr ;
-    grid-template-rows:2fr 2fr 1fr ;
-    grid-auto-columns:200px ;
-} 
-
-.bounce {
-    background-color: black;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    margin: 100px auto;
-    animation-name: bounce;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function:linear;
-}
-
-@keyframes bounce {
-    0%,40%,70%,100% {
-        background-color: black;
-        transform: translateY(100px);
-    }
-
-    20% {
-        background-color: red;
-        transform: translateY(30px);
-    }
-    55% {
-        background-color: green;
-        transform: translateY(-60px);
-    }
-    85% {
-        background-color: blue;
-        transform: translateY(-85px);
-    }
-}
-
-.clip {
-    font-size: 7rem;
-    font-weight: 800;
-    background-image: url(/images/images.jpeg);
-    background-size: cover;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: hsla(208, 100%, 97%, 0.162);
-    background-position: center;
-}
-
-.img {
-    background-image: url(/images/png-clipart-green-emoji-smiley-emoticon-purple-green-smiley-face-face-smiley-thumbnail.png);
-    width: 300px;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-}
-body{
-     min-height: 100vh;
-     background-color: gray;
-     background-image: radial-gradient(white,gray);
-}
-@media screen and (min-width:576px) {
-    body {
-        background-color: red;
-        background-image: radial-gradient(white, red);
-    }
-}
-@media screen and (min-width:768px) {
-    body {
-        background-color: green;
-        background-image: radial-gradient(white, green);
-    }
+/* .card-img-top {
+    width: 100%;
+    height: 10vh; 
+    object-fit: contain;
+    background-color: bisque;
+    background-size: 100%;
 } */
