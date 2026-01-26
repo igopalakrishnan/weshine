@@ -23,6 +23,10 @@
   overflow-y: auto;
 }
 
+.audio{
+  z-index: 1;
+}
+
 
 /* .card-img-top {
     width: 100%;
