@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 #myBtn {
   display: none;
   position: fixed;
@@ -27,6 +33,10 @@
   z-index: 1;
 }
 
+img{
+    max-width: 60px;
+    max-height: 60px;
+}
 
 /* .card-img-top {
     width: 100%;
