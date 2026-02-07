@@ -33,10 +33,30 @@
   z-index: 1;
 }
 
-.image-container {
+ .image-container {
+  width: 70px;
+  height: 70px;
+}
+
+@media only screen and (max-width:320px) {
+  .image-container {
+  width: 82px;
+  height: 82px;
+}
+}
+@media only screen and (min-width:375px) {
+  .image-container {
   width: 75px;
   height: 75px;
 }
+}
+@media only screen and (min-width:420px) {
+  .image-container {
+  width: 70px;
+  height: 70px;
+}
+}
+
 
 .image-container img {
   width: 100%;  /* Image takes the full width of its container */
