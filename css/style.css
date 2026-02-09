@@ -34,26 +34,26 @@
 }
 
  .image-container {
-  width: 83px;
-  height: 83px;
+  width: 87px;
+  height:87px;
 }
 
 @media only screen and (max-width:320px) {
   .image-container {
-  width: 124px;
-  height: 124px;
+  width: 123px;
+  height: 123px;
 }
 }
 @media only screen and (min-width:375px) {
   .image-container {
-  width: 101px;
-  height: 101px;
+  width: 100px;
+  height: 100px;
 }
 }
 @media only screen and (min-width:420px) {
   .image-container {
-  width: 88px;
-  height: 88px;
+  width: 87px;
+  height: 87px;
 }
 }
 
