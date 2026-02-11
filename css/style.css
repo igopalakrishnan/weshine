@@ -34,26 +34,26 @@
 }
 
  .image-container {
-  width: 87px;
-  height:87px;
+  width: 70px;
+  height: 70px;
 }
 
 @media only screen and (max-width:320px) {
   .image-container {
-  width: 123px;
-  height: 123px;
+  width: 82px;
+  height: 82px;
 }
 }
 @media only screen and (min-width:375px) {
   .image-container {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
 }
 }
 @media only screen and (min-width:420px) {
   .image-container {
-  width: 87px;
-  height: 87px;
+  width: 70px;
+  height: 70px;
 }
 }
 
@@ -81,25 +81,6 @@
   touch-action:none;
   transition:transform .1s ease
 }
-.nav-btn{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,.5);
-  color:#fff;
-  border:0;
-  width:45px;
-  height:45px;
-  border-radius:50%;
-  font-size:24px
-}
-.prev{
-  left:10px
-}
-.next{
-  right:10px
-}
-
 
 /* .card-img-top {
     width: 100%;
