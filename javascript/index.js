@@ -1,4 +1,3 @@
-
 // Get the button
 // let mybutton = document.getElementById("myBtn");
 
@@ -26,9 +25,69 @@ const galleryImages = document.querySelectorAll(".gallery-img");
 const modalImage = document.getElementById("modalImage");
 const imageModal = new bootstrap.Modal(document.getElementById("imageModal"));
 
-galleryImages.forEach(img => {
+let currentIndex = 0;
+
+galleryImages.forEach((img) => {
+  const fullSrc = img.dataset.full;
+  if (fullSrc) {
+    const preload = new Image();
+    preload.src = fullSrc;
+  }
+});
+
+// Show modal with selected image
+function showImage(index) {
+  const img = galleryImages[index];
+  modalImage.src = img.dataset.full || img.src;
+  imageModal.show();
+  currentIndex = index;
+}
+
+// Click handler for thumbnails
+galleryImages.forEach((img, index) => {
   img.addEventListener("click", () => {
-    modalImage.src = img.src;
-    imageModal.show();
+    showImage(index);
   });
+});
+
+// Buttons
+document.getElementById("nextBtn").addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  showImage(currentIndex);
+});
+document.getElementById("prevBtn").addEventListener("click", () => {
+  currentIndex =
+    (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  showImage(currentIndex);
+});
+// Swipe gestures
+let startX = 0;
+modalImage.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+modalImage.addEventListener("touchend", (e) => {
+  const endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50) {
+    // swipe left → next
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    showImage(currentIndex);
+  } else if (endX - startX > 50) {
+    // swipe right → previous
+    currentIndex =
+      (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    showImage(currentIndex);
+  }
+});
+
+// Keyboard navigation
+document.addEventListener("keydown", (e) => {
+  if (!document.getElementById("imageModal").classList.contains("show")) return;
+  if (e.key === "ArrowRight") {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    showImage(currentIndex);
+  } else if (e.key === "ArrowLeft") {
+    currentIndex =
+      (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    showImage(currentIndex);
+  }
 });
