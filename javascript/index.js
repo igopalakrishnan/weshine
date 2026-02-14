@@ -61,17 +61,17 @@ document.getElementById("prevBtn").addEventListener("click", () => {
   showImage(currentIndex);
 });
 // Swipe gestures
-let startX = 0;
+let startx = 0;
 modalImage.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
+  startx = e.touches[0].clientX;
 });
 modalImage.addEventListener("touchend", (e) => {
   const endX = e.changedTouches[0].clientX;
-  if (startX - endX > 50) {
+  if (startx - endX > 50) {
     // swipe left → next
     currentIndex = (currentIndex + 1) % galleryImages.length;
     showImage(currentIndex);
-  } else if (endX - startX > 50) {
+  } else if (endX - startx > 50) {
     // swipe right → previous
     currentIndex =
       (currentIndex - 1 + galleryImages.length) % galleryImages.length;
