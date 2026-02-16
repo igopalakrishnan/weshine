@@ -27,14 +27,6 @@ const imageModal = new bootstrap.Modal(document.getElementById("imageModal"));
 
 let currentIndex = 0;
 
-galleryImages.forEach((img) => {
-  const fullSrc = img.dataset.full;
-  if (fullSrc) {
-    const preload = new Image();
-    preload.src = fullSrc;
-  }
-});
-
 // Show modal with selected image
 function showImage(index) {
   const img = galleryImages[index];

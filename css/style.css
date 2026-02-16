@@ -1,7 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #myBtn {
@@ -25,70 +25,125 @@
 }
 
 .offcanvas-body {
-  height: 100vh; 
+  height: 100vh;
   overflow-y: auto;
 }
 
-.audio{
+.audio {
   z-index: 1;
 }
 
- .image-container {
+.image-container {
   width: 70px;
   height: 70px;
 }
 
-@media only screen and (max-width:320px) {
+@media only screen and (max-width: 320px) {
   .image-container {
-  width: 82px;
-  height: 82px;
+    width: 82px;
+    height: 82px;
+  }
 }
-}
-@media only screen and (min-width:375px) {
+@media only screen and (min-width: 375px) {
   .image-container {
-  width: 75px;
-  height: 75px;
+    width: 75px;
+    height: 75px;
+  }
 }
-}
-@media only screen and (min-width:420px) {
+@media only screen and (min-width: 420px) {
   .image-container {
-  width: 70px;
-  height: 70px;
-}
+    width: 70px;
+    height: 70px;
+  }
 }
 
 .image-container img {
-  width: 100%;  /* Image takes the full width of its container */
+  width: 100%; /* Image takes the full width of its container */
   height: 100%; /* Image takes the full height of its container */
   object-fit: cover; /* or 'contain' or 'fill' */
 }
 
-
-.gallery-img{
-  cursor:pointer;
-  transition:.3s;
-  border-radius:14px
+.gallery-img {
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 14px;
 }
-.gallery-img:hover{
-  transform:scale(1.05)
+.gallery-img:hover {
+  transform: scale(1.05);
 }
-.modal-body{
-  position:relative;
-  overflow:hidden
+.modal-body {
+  position: relative;
+  overflow: hidden;
 }
-.modal-body img{
-  max-height:80vh;
-  touch-action:none;
-  transition:transform .1s ease
+.modal-body img {
+  max-height: 80vh;
+  touch-action: none;
+  transition: transform 0.1s ease;
 }
 
 #card {
   height: 80px;
 }
 
-#card img{
+#card img {
   height: 80px;
 }
+
+/* Full page centering */
+.loader-page {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
+  height: 100vh; /* full viewport height */
+  background: #f9f9f9; /* optional background */
+}
+
+/* Loader layout */
+.loader-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between text and dots */
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #333;
+}
+
+.loader {
+  display: flex;
+  gap: 6px;
+}
+
+.loader-dot {
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loader-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loader-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+/* .modal.fade .modal-dialog {
+  transition:
+    transform 0.01s ease-out,
+    opacity 0.01s ease-out !important;
+} */
 
 /* .card-img-top {
     width: 100%;
@@ -97,4 +152,3 @@
     background-color: bisque;
     background-size: 100%;
 } */
-
